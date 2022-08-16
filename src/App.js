@@ -3,7 +3,7 @@ import ResumeCreator from "./component/ResumeCreator";
 
 function App() {
   return (
-    <Container sx={{ my: "100px" }}>
+    <Container sx={{ mt: "50px", mb: "100px" }}>
       <ResumeCreator />
     </Container>
   );

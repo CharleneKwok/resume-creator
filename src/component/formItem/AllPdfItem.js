@@ -80,9 +80,7 @@ export const EducationItem = ({ listEdu }) => {
           <Text style={styles.text}>
             {item?.Degree} {item?.Major}
           </Text>
-          <Text style={styles.text}>
-            {item?.Description.replace(/\n-/, "\n• ").replace(/^-/, "• ")}
-          </Text>
+          <Text style={styles.text}>{item?.Description}</Text>
         </View>
       ))}
     </View>
@@ -107,10 +105,7 @@ export const WorkItem = ({ listWork }) => {
             </Text>
           </View>
           <Text style={styles.text}>{item?.Position}</Text>
-          <Text style={styles.text}>
-            {" "}
-            {item?.Description.replace(/\n-/, "\n• ").replace(/^-/, "• ")}
-          </Text>
+          <Text style={styles.text}> {item?.Description}</Text>
         </View>
       ))}
     </View>
@@ -124,9 +119,7 @@ export const ProjItem = ({ listProj }) => {
       {listProj.map((item, i) => (
         <View key={`Proj_${i}`} style={styles.subsection}>
           <Text style={styles.subtitle}>{item?.Project_Name}</Text>
-          <Text style={styles.text}>
-            {item?.Description.replace(/\n-/, "\n• ").replace(/^-/, "• ")}
-          </Text>
+          <Text style={styles.text}>{item?.Description}</Text>
         </View>
       ))}
     </View>
@@ -137,9 +130,7 @@ export const OtherItem = ({ section, description }) => {
   return (
     <View style={styles.section}>
       <Text style={styles.title}>{section.toUpperCase()}</Text>
-      <Text style={styles.text}>
-        {description.replace(/\n-/, "\n• ").replace(/^-/, "• ")}
-      </Text>
+      <Text style={styles.text}>{description}</Text>
     </View>
   );
 };
